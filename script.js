@@ -129,7 +129,7 @@ const commands = {
         'Perforce ████████████ expert',
     ],
     contact: [
-        'LinkedIn: linkedin.com/in/henry-t95',
+        'LinkedIn: linkedin.com/in/henryktam',
         'GitHub:   github.com/henrytamm',
         'Email:    henrytam95@gmail.com',
     ],

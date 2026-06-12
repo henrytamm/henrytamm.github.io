@@ -83,3 +83,106 @@ document.querySelectorAll('.about-card, .work-item, .sample-card, .project-card,
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Interactive terminal
+const terminalInput = document.getElementById('terminal-input');
+const terminalBody = document.getElementById('terminal-body');
+
+const commands = {
+    help: [
+        'Available commands:',
+        '  whoami        — about me',
+        '  ls projects/  — see my work',
+        '  cat resume.txt— quick summary',
+        '  skills        — tech stack',
+        '  contact       — reach me',
+        '  coffee        — ☕',
+        '  clear         — reset terminal',
+    ],
+    whoami: [
+        'henry.tam — technical writer, ex-SWE',
+        'Psychology grad → App Academy → Salesforce',
+        'I make complex things make sense.',
+    ],
+    'ls projects/': [
+        'tea-time/       — Discord clone (Flask + React)',
+        'yell/           — Yelp clone (Flask + React)',
+        'tech-writing-tools/ — Doc automation toolkit',
+    ],
+    'cat resume.txt': [
+        '┌─────────────────────────────────────┐',
+        '│  Henry Tam                          │',
+        '│  Technical Writer @ Salesforce      │',
+        '│  Data 360 · Connectors · SDKs      │',
+        '│                                     │',
+        '│  Previously: App Academy (SWE)      │',
+        '│  Education: UC Davis (Psychology)   │',
+        '│                                     │',
+        '│  henry.tam@proton.me                │',
+        '└─────────────────────────────────────┘',
+    ],
+    skills: [
+        'DITA XML ████████████ expert',
+        'Python   ██████████░ advanced',
+        'React    █████████░░ advanced',
+        'MCP      ████████░░░ proficient',
+        'Perforce ████████████ expert',
+    ],
+    contact: [
+        'LinkedIn: linkedin.com/in/henry-t95',
+        'GitHub:   github.com/henrytamm',
+        'Email:    henrytam95@gmail.com',
+    ],
+    coffee: [
+        '         .',
+        '        .',
+        '    .',
+        '   ┌───┐',
+        '   │   │▏',
+        '   └───┘',
+        '   ═════',
+        'Here you go ☕ — now get back to reading my portfolio.',
+    ],
+    sudo: ['Nice try. 🙃'],
+    'sudo rm -rf /': ['Nice try. 🙃'],
+    vim: ['You\'re stuck now. Just kidding — there is no vim here.'],
+    exit: ['You can check out any time you like, but you can never leave. 🎶'],
+};
+
+if (terminalInput) {
+    terminalInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const cmd = terminalInput.value.trim().toLowerCase();
+            terminalInput.value = '';
+
+            if (!cmd) return;
+
+            // Add the command line
+            const cmdLine = document.createElement('p');
+            cmdLine.classList.add('terminal-cmd-new');
+            cmdLine.innerHTML = `<span class="prompt">$</span> ${cmd}`;
+            terminalBody.insertBefore(cmdLine, terminalInput.closest('.terminal-input-line'));
+
+            if (cmd === 'clear') {
+                // Remove all lines except the input
+                const inputLine = terminalInput.closest('.terminal-input-line');
+                while (terminalBody.firstChild !== inputLine) {
+                    terminalBody.removeChild(terminalBody.firstChild);
+                }
+                terminalBody.removeChild(cmdLine);
+                return;
+            }
+
+            const output = commands[cmd] || [`command not found: ${cmd}. Try 'help'`];
+            output.forEach(line => {
+                const p = document.createElement('p');
+                p.classList.add('terminal-output-new');
+                p.textContent = line;
+                terminalBody.insertBefore(p, terminalInput.closest('.terminal-input-line'));
+            });
+
+            // Scroll terminal to bottom
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+    });
+}

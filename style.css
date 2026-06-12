@@ -385,10 +385,24 @@ a {
     box-shadow: 0 12px 32px rgba(167, 139, 250, 0.1);
 }
 
-.about-emoji {
-    font-size: 40px;
-    display: block;
+.about-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
     margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--accent);
+    transition: all 0.3s;
+}
+
+.about-card:hover .about-icon {
+    background: rgba(167, 139, 250, 0.2);
+    transform: scale(1.1);
 }
 
 .about-card h3 {
@@ -424,8 +438,23 @@ a {
 }
 
 .work-icon {
-    font-size: 32px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.2);
     margin-bottom: 16px;
+    font-size: 18px;
+    color: var(--accent-2);
+    transition: all 0.3s;
+}
+
+.work-item:hover .work-icon {
+    background: rgba(96, 165, 250, 0.2);
+    transform: scale(1.1);
 }
 
 .work-item h3 {

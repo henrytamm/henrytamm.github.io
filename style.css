@@ -33,6 +33,27 @@
     --preview-bg: #1e293b;
 }
 
+[data-theme="light"] .btn-primary {
+    color: #ffffff;
+}
+
+[data-theme="light"] .project-label {
+    color: #ffffff;
+}
+
+[data-theme="light"] .terminal {
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .about-card,
+[data-theme="light"] .project-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .sample-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
 /* === Reset === */
 *, *::before, *::after {
     margin: 0;
@@ -43,6 +64,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    transition: background-color 0.3s;
 }
 
 body {

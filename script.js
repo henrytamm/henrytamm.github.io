@@ -1,3 +1,28 @@
+// Theme toggle (runs first to avoid being blocked by other scripts)
+const themeToggleBtn = document.getElementById('theme-toggle');
+const savedThemeOnLoad = localStorage.getItem('theme');
+
+if (savedThemeOnLoad) {
+    document.documentElement.setAttribute('data-theme', savedThemeOnLoad);
+    const icon = themeToggleBtn.querySelector('i');
+    if (icon) icon.className = 'fa-solid fa-sun';
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        if (current === 'light') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.removeItem('theme');
+            themeToggleBtn.querySelector('i').className = 'fa-solid fa-moon';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeToggleBtn.querySelector('i').className = 'fa-solid fa-sun';
+        }
+    });
+}
+
 // Typewriter effect
 const phrases = [
     'clear docs.',
@@ -187,34 +212,3 @@ if (terminalInput) {
     });
 }
 
-// Theme toggle
-const themeToggle = document.getElementById('theme-toggle');
-const savedTheme = localStorage.getItem('theme');
-
-if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateToggleIcon(savedTheme);
-}
-
-themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'light' ? null : 'light';
-
-    if (next) {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.removeItem('theme');
-    }
-    updateToggleIcon(next);
-});
-
-function updateToggleIcon(theme) {
-    const icon = themeToggle.querySelector('i');
-    if (theme === 'light') {
-        icon.className = 'fa-solid fa-sun';
-    } else {
-        icon.className = 'fa-solid fa-moon';
-    }
-}

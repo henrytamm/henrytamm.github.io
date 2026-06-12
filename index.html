@@ -218,44 +218,48 @@ SalesforceInteractions.init({
                         <span class="tag">SDK</span>
                         <span class="tag">API Reference</span>
                     </div>
-                    <a href="https://developer.salesforce.com/docs/marketing/personalization/references/web-sdk-time-tracking.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
+                    <a href="https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-time-tracking.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
                 </div>
                 <div class="sample-card">
-                    <div class="sample-type">Connector Guide</div>
-                    <h3>Confluence Unstructured Connector</h3>
-                    <p>End-to-end guide for ingesting unstructured data from Atlassian Confluence Cloud into Data 360 — setup, limitations, troubleshooting.</p>
+                    <div class="sample-type">Integration Guide</div>
+                    <h3>Server-to-Server Connection</h3>
+                    <p>Setup guide for ingesting data from non-web sources (Agentforce, POS, IoT, kiosks) into Data 360 via authenticated server-to-server API connections.</p>
                     <div class="sample-preview">
-                        <pre><code># Confluence Unstructured Connector (Beta)
+                        <pre><code># Connect Data from Other Sources
 
-Use the Confluence Unstructured connector to ingest
-unstructured data from Atlassian Confluence Cloud
-into Data 360.
+Connect non-web and non-mobile data sources to
+Data 360 to collect customer engagement and
+profile data. Use this connection type for sources
+like Agentforce conversations, point-of-sale (POS)
+transactions, IoT device telemetry, or self-service
+kiosks that cannot provide browser or mobile app
+context.
 
-## Supported Content Types
+## Required Fields
 
-1. Pages (including nested/child pages)
-2. Blog posts
-3. Comments (on pages and blog posts)
-4. Attachments
+Only three fields are mandatory:
+- `eventId` — Unique event identifier
+- `eventType` — Type of event
+- `dateTime` — Timestamp of the event
 
-## Known Limitations
+Optional: `sessionId`, `deviceId`, `category`
 
-**Confluence Cloud Only**
-This connector supports Atlassian Confluence Cloud
-(SaaS) only. Confluence Data Center and Server
-are not supported.
+## Setup Steps
 
-**Single Space per Data Lake Object**
-Each UDLO ingests content from a single space.
-To ingest from multiple spaces, create separate
-UDLOs for each space.</code></pre>
+1. Create a web & mobile connection from Setup
+2. Click New, name it, select Server to Server,
+   then select Data from Other Sources
+3. Upload your JSON Event Type schema file
+4. Preview & verify Event Category, field types,
+   Primary Key, and required fields
+5. Save and copy the generated Source ID</code></pre>
                     </div>
                     <div class="sample-meta">
-                        <span class="tag">Connector</span>
-                        <span class="tag">Unstructured Data</span>
-                        <span class="tag">Beta</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Integration</span>
+                        <span class="tag">Data Ingestion</span>
                     </div>
-                    <a href="https://help.salesforce.com/s/articleView?id=sf.c360_a_connect_confluence_unstructured.htm" target="_blank" class="sample-link">Read on Salesforce Help <span>→</span></a>
+                    <a href="https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-authenticated-server-to-server.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
                 </div>
                 <div class="sample-card">
                     <div class="sample-type">Mobile SDK Guide</div>
@@ -297,7 +301,7 @@ SFMCSdk.track(AddToCartEvent(
                         <span class="tag">Android</span>
                         <span class="tag">SDK</span>
                     </div>
-                    <a href="https://developer.salesforce.com/docs/marketing/personalization/guide/mobile-sdk-engagement-data.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
+                    <a href="https://developer.salesforce.com/docs/data/data-cloud-engagement-mobile-sdk/guide/c360a-api-engagement-mobile-sdk-capturing-engagement-data-v2.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
                 </div>
             </div>
         </div>

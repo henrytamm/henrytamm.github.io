@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Henry Tam — Technical Writer</title>
+    <meta name="description" content="Technical writer turning complex systems into clear docs. Data 360 connectors, SDKs, APIs. Full-stack dev on the side." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Henry Tam — Technical Writer" />
+    <meta property="og:description" content="I turn complex systems into clear docs. Data 360 connectors, SDKs, APIs, and automation tools." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://henrytamm.github.io" />
+    <meta property="og:image" content="https://henrytamm.github.io/og-image.svg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Henry Tam — Technical Writer" />
+    <meta name="twitter:description" content="I turn complex systems into clear docs. Data 360 connectors, SDKs, APIs, and automation tools." />
+    <meta name="twitter:image" content="https://henrytamm.github.io/og-image.svg" />
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +56,20 @@
                 <a href="#work" class="btn btn-primary">See my work <span class="arrow">→</span></a>
                 <a href="#contact" class="btn btn-ghost">Get in touch</a>
             </div>
+            <div class="stats-strip">
+                <div class="stat">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Connectors documented</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">SDKs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Published topics</span>
+                </div>
+            </div>
         </div>
         <div class="hero-visual">
             <div class="terminal">
@@ -50,7 +79,7 @@
                     <span class="dot green"></span>
                     <span class="terminal-title">~/henry</span>
                 </div>
-                <div class="terminal-body">
+                <div class="terminal-body" id="terminal-body">
                     <p><span class="prompt">$</span> whoami</p>
                     <p class="output">henry.tam — technical writer, ex-SWE</p>
                     <p><span class="prompt">$</span> cat current_role.txt</p>
@@ -60,7 +89,10 @@
                     <p class="output">DITA-XML/ Python/ React/ MCP/ Perforce/</p>
                     <p><span class="prompt">$</span> echo $VIBE</p>
                     <p class="output">"oh, that makes sense"</p>
-                    <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">▊</span></p>
+                    <div class="terminal-input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="try 'help'" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,6 +218,7 @@ SalesforceInteractions.init({
                         <span class="tag">SDK</span>
                         <span class="tag">API Reference</span>
                     </div>
+                    <a href="https://developer.salesforce.com/docs/marketing/personalization/references/web-sdk-time-tracking.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
                 </div>
                 <div class="sample-card">
                     <div class="sample-type">Connector Guide</div>
@@ -222,6 +255,7 @@ UDLOs for each space.</code></pre>
                         <span class="tag">Unstructured Data</span>
                         <span class="tag">Beta</span>
                     </div>
+                    <a href="https://help.salesforce.com/s/articleView?id=sf.c360_a_connect_confluence_unstructured.htm" target="_blank" class="sample-link">Read on Salesforce Help <span>→</span></a>
                 </div>
                 <div class="sample-card">
                     <div class="sample-type">Mobile SDK Guide</div>
@@ -263,6 +297,7 @@ SFMCSdk.track(AddToCartEvent(
                         <span class="tag">Android</span>
                         <span class="tag">SDK</span>
                     </div>
+                    <a href="https://developer.salesforce.com/docs/marketing/personalization/guide/mobile-sdk-engagement-data.html" target="_blank" class="sample-link">Read on developer.salesforce.com <span>→</span></a>
                 </div>
             </div>
         </div>

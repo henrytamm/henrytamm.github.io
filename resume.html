@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Henry Tam</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb68d7f8c4.js" crossorigin="anonymous"></script>
+    <style>
+        .resume-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .resume-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .resume-header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+        .resume-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: #0a0a0f;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        [data-theme="light"] .btn-download {
+            color: #ffffff;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-1px);
+            background: #b89dff;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .btn-back:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        .resume-section {
+            margin-bottom: 40px;
+        }
+
+        .resume-section-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .resume-summary {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .skill-row {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .skill-value {
+            color: var(--text-muted);
+        }
+
+        .pub-item {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+        }
+
+        .pub-item:hover {
+            border-color: var(--accent-2);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: var(--accent-2);
+        }
+
+        .pub-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .job {
+            margin-bottom: 28px;
+        }
+
+        .job-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-family: var(--mono);
+        }
+
+        .job-company {
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .job ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job li {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .job li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: var(--mono);
+            font-size: 12px;
+        }
+
+        .edu-item {
+            margin-bottom: 12px;
+        }
+
+        .edu-program {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .edu-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .resume-header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .job-top {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .resume-page {
+                padding: 80px 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating nav pill -->
+    <nav class="pill-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#samples" class="nav-link">Samples</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link active">Resume</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <div class="resume-page">
+        <div class="resume-header">
+            <div>
+                <h1>Resume</h1>
+                <p>Technical Writer | API & SDK Documentation</p>
+            </div>
+            <div class="resume-actions">
+                <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Portfolio</a>
+                <a href="henry-tam-resume.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download PDF</a>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="resume-section-title">Summary</div>
+            <p class="resume-summary">Technical writer with hands-on experience documenting APIs, SDKs, and enterprise data products at Salesforce. Combines a full-stack engineering background with structured authoring expertise in DITA XML and docs-as-code workflows. Builds AI-powered documentation automation that cut routine task time by 90% and creates AI workflows adopted by the wider writing team.</p>
+        </div>
+
+        <div class="resume-section">
+            <div class="resume-section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-label">Structured Authoring:</span> <span class="skill-value">DITA XML, Oxygen XML Author, topic-based authoring, content reuse (conrefs/keyrefs), information architecture</span></div>
+                <div class="skill-row"><span class="skill-label">Docs-as-Code:</span> <span class="skill-value">Git/GitHub, Perforce (P4), Markdown, CI/CD publishing workflows</span></div>
+                <div class="skill-row"><span class="skill-label">Programming:</span> <span class="skill-value">JavaScript, Python, HTML/CSS, SQL, REST APIs</span></div>
+                <div class="skill-row"><span class="skill-label">AI & Automation:</span> <span class="skill-value">Claude, Cursor, ChatGPT, prompt engineering, AI workflow design for documentation teams</span></div>
+                <div class="skill-row"><span class="skill-label">Platforms & Tools:</span> <span class="skill-value">Confluence, GUS, Salesforce Data Cloud, AWS S3</span></div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="resume-section-title">Published Work</div>
+            <a href="https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-time-tracking.html" target="_blank" class="pub-item" style="display:block; text-decoration:none;">
+                <div class="pub-title">Time Tracking API Reference</div>
+                <div class="pub-desc">Comprehensive API reference covering configuration parameters, event output schemas, best practices, and troubleshooting for the SDK's active user engagement tracking system.</div>
+            </a>
+            <a href="https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-authenticated-server-to-server.html" target="_blank" class="pub-item" style="display:block; text-decoration:none;">
+                <div class="pub-title">Server-to-Server Implementation Guide</div>
+                <div class="pub-desc">Developer-facing implementation guide covering authentication flows, API endpoints, and data ingestion for Data 360's server-to-server SDK integration.</div>
+            </a>
+        </div>
+
+        <div class="resume-section">
+            <div class="resume-section-title">Experience</div>
+
+            <div class="job">
+                <div class="job-top">
+                    <span class="job-title">Technical Writing Intern</span>
+                    <span class="job-date">Feb 2026 - Present</span>
+                </div>
+                <div class="job-company">Salesforce &middot; San Francisco, CA</div>
+                <ul>
+                    <li>Authored 10+ release notes and developer docs for Data 360, covering connectors, REST APIs, and SDK implementations in DITA XML</li>
+                    <li>Built AI-powered documentation workflows adopted by the writing team, automating drafting, formatting, and metadata tasks — reducing typical completion time from 2-3 hours to 5-10 minutes</li>
+                    <li>Owned end-to-end documentation for Web SDK and Mobile SDK, managing full lifecycle from audience analysis through publication and maintenance</li>
+                    <li>Restructured Data 360 documentation TOC (~50 topics), improving navigation by consolidating redundant layers and applying information architecture principles</li>
+                    <li>Interviewed PMs and engineers to document new connector features, resolving technical ambiguities before publication and ensuring accuracy across 4+ product areas</li>
+                    <li>Designed reusable content strategies (conrefs, keyrefs) to reduce duplication and streamline updates across release cycles</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-top">
+                    <span class="job-title">QA Test Engineer</span>
+                    <span class="job-date">Dec 2023 - Jun 2024</span>
+                </div>
+                <div class="job-company">Playtest &middot; San Francisco, CA</div>
+                <ul>
+                    <li>Designed and executed test plans for web and mobile applications, identifying critical bugs across functional, regression, and integration testing</li>
+                    <li>Created structured test documentation — test cases, bug reports, and QA metrics — building the documentation rigor later applied to technical writing</li>
+                    <li>Collaborated with development teams in agile sprints, translating developer context into clear quality feedback and acceptance criteria</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="resume-section-title">Education</div>
+            <div class="edu-item">
+                <div class="edu-program">Project Management Professional Development</div>
+                <div class="edu-meta">YearUp &middot; 2024 - 2026</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-program">Full Stack Software Engineering Immersive</div>
+                <div class="edu-meta">App Academy &middot; 2022 - 2023</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-program">Bachelor of Science, Psychology</div>
+                <div class="edu-meta">San Francisco State University &middot; 2017 - 2019</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Built with HTML, CSS, and vibes. No frameworks were harmed.</p>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const icon = themeToggleBtn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-sun';
+        }
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                if (current === 'light') {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.removeItem('theme');
+                    themeToggleBtn.querySelector('i').className = 'fa-solid fa-moon';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeToggleBtn.querySelector('i').className = 'fa-solid fa-sun';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

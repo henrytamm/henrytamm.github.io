@@ -1,21 +1,21 @@
 /* === Variables === */
 :root {
-    --bg: #0a0a0f;
-    --bg-card: #12121a;
-    --bg-card-hover: #1a1a26;
+    --bg: #1f1f23;
+    --bg-card: #27272a;
+    --bg-card-hover: #303033;
     --text: #e4e4e7;
-    --text-muted: #71717a;
+    --text-muted: #a1a1aa;
     --accent: #a78bfa;
     --accent-2: #60a5fa;
     --gradient: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
-    --border: #27272a;
+    --border: #3f3f46;
     --radius: 12px;
     --radius-sm: 8px;
     --font: 'Space Grotesk', sans-serif;
     --mono: 'JetBrains Mono', monospace;
-    --terminal-bg: #1a1a2e;
-    --terminal-header: #0f0f1a;
-    --preview-bg: #0f0f1a;
+    --terminal-bg: #27272a;
+    --terminal-header: #1f1f23;
+    --preview-bg: #1f1f23;
 }
 
 [data-theme="light"] {
@@ -116,7 +116,7 @@ a {
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(18, 18, 26, 0.8);
+    background: rgba(31, 31, 35, 0.85);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: 999px;

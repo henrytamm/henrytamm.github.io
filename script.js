@@ -186,3 +186,35 @@ if (terminalInput) {
         }
     });
 }
+
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateToggleIcon(savedTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? null : 'light';
+
+    if (next) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+    }
+    updateToggleIcon(next);
+});
+
+function updateToggleIcon(theme) {
+    const icon = themeToggle.querySelector('i');
+    if (theme === 'light') {
+        icon.className = 'fa-solid fa-sun';
+    } else {
+        icon.className = 'fa-solid fa-moon';
+    }
+}

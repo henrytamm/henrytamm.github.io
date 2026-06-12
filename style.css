@@ -45,6 +45,27 @@
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="light"] .terminal-body {
+    color: #e4e4e7;
+}
+
+[data-theme="light"] .terminal-body .output,
+[data-theme="light"] .terminal-body .terminal-output-new {
+    color: #a1a1aa;
+}
+
+[data-theme="light"] .terminal-body .prompt {
+    color: #a78bfa;
+}
+
+[data-theme="light"] .terminal-input {
+    color: #e4e4e7;
+}
+
+[data-theme="light"] .terminal-title {
+    color: #a1a1aa;
+}
+
 [data-theme="light"] .about-card,
 [data-theme="light"] .project-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -52,6 +73,11 @@
 
 [data-theme="light"] .sample-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .sample-preview pre,
+[data-theme="light"] .sample-preview code {
+    color: #a1a1aa;
 }
 
 /* === Reset === */

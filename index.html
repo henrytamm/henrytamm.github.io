@@ -1,344 +1,345 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!--Google Analytics-->
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MS170BT065"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-MS170BT065');
-	</script>
-	<title>Henry Tam Portfolio</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-
-	<!--Favicon-->
-	<link rel="icon" type="image/x-icon"
-		href="https://static.vecteezy.com/system/resources/previews/012/721/541/original/this-is-fine-dog-meme-icon-free-vector.jpg">
-	<!--FontAwesome-->
-	<script src="https://kit.fontawesome.com/bb68d7f8c4.js" crossorigin="anonymous"></script>
-
-	<!--Custom CSS-->
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-
-
-	</noscript>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henry Tam — Technical Writer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb68d7f8c4.js" crossorigin="anonymous"></script>
 </head>
+<body>
+    <!-- Floating nav pill -->
+    <nav class="pill-nav">
+        <a href="#top" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#samples" class="nav-link">Samples</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Say Hi</a>
+    </nav>
 
-<body class="is-preload">
+    <!-- Hero -->
+    <section id="top" class="hero">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <img src="profile-pic.jpeg" alt="Henry Tam" class="avatar-img" />
+            </div>
+            <div class="hero-badge">📝 Technical Writer @ Salesforce</div>
+            <h1 class="hero-title">
+                I turn <span class="gradient-text">complex systems</span><br>
+                into <span class="typewriter" id="typewriter"></span>
+            </h1>
+            <p class="hero-sub">
+                Documenting Data Cloud by day. Building full-stack apps and automation tools by night.
+                <br>Psychology grad turned engineer turned writer — I've been on both sides of the docs.
+            </p>
+            <div class="hero-ctas">
+                <a href="#work" class="btn btn-primary">See my work <span class="arrow">→</span></a>
+                <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">~/henry</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> whoami</p>
+                    <p class="output">henry.tam — technical writer, ex-SWE</p>
+                    <p><span class="prompt">$</span> cat current_role.txt</p>
+                    <p class="output">Data Cloud @ Salesforce</p>
+                    <p class="output">→ Connectors, SDKs, APIs, Gov Cloud</p>
+                    <p><span class="prompt">$</span> ls skills/</p>
+                    <p class="output">DITA-XML/ Python/ React/ MCP/ Perforce/</p>
+                    <p><span class="prompt">$</span> echo $VIBE</p>
+                    <p class="output">this is fine 🐕‍🦺🔥</p>
+                    <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">▊</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2 class="section-title">The lore</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="about-emoji">🧠</span>
+                    <h3>Psychology Grad</h3>
+                    <p>Started by studying how people think. Turns out that's useful when you're explaining software to humans.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-emoji">💻</span>
+                    <h3>App Academy</h3>
+                    <p>Learned to code. Built full-stack apps. Realized I was better at explaining code than writing it at 2am.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-emoji">✍️</span>
+                    <h3>Tech Writer</h3>
+                    <p>Now I document Salesforce Data Cloud — connectors, SDKs, APIs, and everything in between. Plus I automate the boring parts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<span class="logo"><img class='logo-container-sk'
-					src="https://static.vecteezy.com/system/resources/previews/012/721/541/original/this-is-fine-dog-meme-icon-free-vector.jpg">
-                </span>
-			<h1>Technical Writer & Software Developer</h1>
-			<p>Documenting complex systems at Salesforce. Building full-stack apps on the side.</p>
-		</header>
+    <!-- Work -->
+    <section id="work" class="work">
+        <div class="section-container">
+            <h2 class="section-title">What I actually do</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-icon">📄</div>
+                    <h3>Documentation</h3>
+                    <p>DITA XML topics for Salesforce Help. Release notes, how-to guides, API references. Structured authoring at enterprise scale.</p>
+                    <div class="work-tags">
+                        <span class="tag">DITA XML</span>
+                        <span class="tag">Perforce</span>
+                        <span class="tag">Structured Authoring</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">🔌</div>
+                    <h3>Data Cloud Connectors</h3>
+                    <p>Documenting 30+ connectors — from BigQuery to Databricks to Zendesk. Auth flows, data mappings, Gov Cloud compliance.</p>
+                    <div class="work-tags">
+                        <span class="tag">Connectors</span>
+                        <span class="tag">Gov Cloud</span>
+                        <span class="tag">SDK</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">🤖</div>
+                    <h3>Automation</h3>
+                    <p>Built tools that auto-generate release notes, process Slack intake requests, route doc work items, and manage version control.</p>
+                    <div class="work-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">Slack API</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">🚀</div>
+                    <h3>Release Management</h3>
+                    <p>Flipping beta/pilot/GA tags, managing ditamaps, coordinating cross-team doc drops across releases.</p>
+                    <div class="work-tags">
+                        <span class="tag">Release Notes</span>
+                        <span class="tag">Ditamaps</span>
+                        <span class="tag">Cross-team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul>
-				<li><a href="#intro" class="active">Hello</a></li>
-				<li><a href="#first">Projects</a></li>
-				<li><a href="#second">Skills</a></li>
-				<li><a href="#cta">Contact</a></li>
-			</ul>
-		</nav>
+    <!-- Writing Samples -->
+    <section id="samples" class="samples">
+        <div class="section-container">
+            <h2 class="section-title">Writing samples</h2>
+            <p class="samples-sub">Published documentation I authored for Salesforce Data Cloud. These live on developer.salesforce.com.</p>
+            <div class="samples-grid">
+                <div class="sample-card">
+                    <div class="sample-type">SDK Reference</div>
+                    <h3>Web SDK Time Tracking</h3>
+                    <p>Full API reference for time tracking in the Salesforce Web SDK — configuration options, implementation examples, event structure, and lifecycle management.</p>
+                    <div class="sample-preview">
+                        <pre><code># Time Tracking
 
-		<!-- Main -->
-		<div id="main">
+Time tracking captures user engagement metrics by
+monitoring active time spent on pages and catalog
+items. Events are sent when configurable time
+thresholds are crossed.
 
-			<!-- Introduction -->
-			<section id="intro" class="main">
-				<div class="spotlight">
-					<div class="content">
-						<header class="major">
-							<h2>Hi, I'm Henry 🧑🏻‍💻</h2>
-						</header>
-						<p>I'm a Technical Writer at Salesforce on the Data Cloud team, where I document connectors, SDKs, and platform integrations for one of the largest enterprise data platforms in the world. My background spans psychology, software engineering (App Academy), and technical communication — giving me a unique ability to translate complex systems into clear, developer-friendly documentation. I also build full-stack applications and automation tools to streamline documentation workflows.</p>
-					</div>
-					<span class="image"><img src="./images/profile-pic.jpeg" alt="profile image" /></span>
-				</div>
-			</section>
+## Configuration Options
 
-			<!-- First Section -->
-			<section id="first" class="main special">
-				<header class="major">
-					<h2>Projects</h2>
-				</header>
-				<ul class="features">
-					<li>
-						<a href="https://github.com/henrytamm/tech-writing-tools" target="_blank">
-							<span class="image">
-								<img class='project-img' src="/images/tea-time-ss.png" />
-							</span>
-						</a>
-						<h2> <a href="https://github.com/henrytamm/tech-writing-tools" target="_blank"
-								class='underline'>Tech Writing Tools</a></h2>
-						<h5 class="languages">
-                            Built using Python, MCP, Slack API, DITA XML, Perforce
-                        </h5>
-						<ul class="project-details">
-							<li class="bullet-points">
-								Automation toolkit for technical writing workflows at scale
-							</li>
-							<li class="bullet-points">
-								Slack intake processing, doc request routing, release note generation, and version control automation
-							</li>
-						</ul>
+| Option Name         | Type    | Default   |
+| ------------------- | ------- | --------- |
+| `enabled`           | boolean | `false`   |
+| `thresholds`        | array   | See below |
+| `activityTimeout..` | number  | `5000`    |
 
-						<a href="https://github.com/henrytamm/tech-writing-tools" class="hide-underline" target="_blank">
-							<button class='button' target="_blank">
-								<div>
-									<h6>
-										<i class="fa-brands fa-github"></i>
-										Github
-									</h6>
-								</div>
-							</button>
-						</a>
-					</li>
+## Implementation Examples
 
-					<li>
-						<a href="https://tea-time-ll6f.onrender.com/" target="_blank">
-							<span class="image">
-								<img class='project-img' src="/images/tea-time-ss.png" />
-							</span>
-						</a>
-						<h2> <a href="https://tea-time-ll6f.onrender.com/" target="_blank"
-								class='underline'>Tea Time</a></h2>
-						<h5 class="languages">
-                            Built using Flask, React, Redux, PostgreSQL, WebSockets, AWS, HTML, CSS
-                        </h5>
-						<ul class="project-details">
-							<li class="bullet-points">
-								Full-stack Discord clone with real-time messaging via WebSockets
-							</li>
-							<li class="bullet-points">
-								Create servers, channels, and chat live with friends
-							</li>
-						</ul>
+```javascript
+SalesforceInteractions.init({
+  dataCloud: {
+    timeTracking: {
+      enabled: true,
+      thresholds: [
+        { label: 'ENGAGED', threshold: 15000 },
+        { label: 'HIGH_ENGAGEMENT', threshold: 60000 }
+      ]
+    }
+  }
+});
+```</code></pre>
+                    </div>
+                    <div class="sample-meta">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">SDK</span>
+                        <span class="tag">API Reference</span>
+                    </div>
+                </div>
+                <div class="sample-card">
+                    <div class="sample-type">Connector Guide</div>
+                    <h3>Confluence Unstructured Connector</h3>
+                    <p>End-to-end guide for ingesting unstructured data from Atlassian Confluence Cloud into Data Cloud — setup, limitations, troubleshooting.</p>
+                    <div class="sample-preview">
+                        <pre><code># Confluence Unstructured Connector (Beta)
 
-						<a href="https://github.com/henrytamm/tea-time" class="hide-underline" target="_blank">
-							<button class='button' target="_blank">
-								<div>
-									<h6>
-										<i class="fa-brands fa-github"></i>
-										Github
-									</h6>
-								</div>
-							</button>
-						</a>
+Use the Confluence Unstructured connector to ingest
+unstructured data from Atlassian Confluence Cloud
+into Data 360.
 
-						<a href="https://tea-time-ll6f.onrender.com/" class="no-underline" target="_blank">
-							<button class='button' target="_blank">
-								<h6>Live Site</h6>
-							</button>
-						</a>
-					</li>
+## Supported Content Types
 
-					<li>
-						<a href="https://github.com/henrytamm/yell-v2" target="_blank" class="no-underline">
-							<span class="image"><img class='project-img' src="/images/better-yell-ss.png" /></span>
-						</a>
-						<h2> <a href="https://github.com/henrytamm/yell-v2" target="_blank" class='underline'>Yell</a>
-						</h2>
-						<h5 class="languages">
-                            Built using Flask, React, Redux, PostgreSQL, Google Maps API, HTML, CSS
-						</h5>
-						<ul class="project-details">
-							<li class="bullet-points">
-								Full-stack Yelp clone with business listings, reviews, and star ratings
-							</li>
-							<li class="bullet-points">
-								Search by category, view business hours, and explore locations on Google Maps
-							</li>
-						</ul>
+1. Pages (including nested/child pages)
+2. Blog posts
+3. Comments (on pages and blog posts)
+4. Attachments
 
-						<a href="https://github.com/henrytamm/yell-v2" target="_blank">
-							<button class='button' target="_blank">
-								<div>
-									<h6>
-										<i class="fa-brands fa-github"></i>
-										Github
-									</h6>
-								</div>
-							</button>
-						</a>
+## Known Limitations
 
-						<a href="https://yell-v2.onrender.com/" class="no-underline" target="_blank">
-							<button class='button' target="_blank">
-								<h6>Live Site</h6>
-							</button>
-						</a>
-					</li>
-				</ul>
+**Confluence Cloud Only**
+This connector supports Atlassian Confluence Cloud
+(SaaS) only. Confluence Data Center and Server
+are not supported.
 
-			</section>
+**Single Space per Data Lake Object**
+Each UDLO ingests content from a single space.
+To ingest from multiple spaces, create separate
+UDLOs for each space.</code></pre>
+                    </div>
+                    <div class="sample-meta">
+                        <span class="tag">Connector</span>
+                        <span class="tag">Unstructured Data</span>
+                        <span class="tag">Beta</span>
+                    </div>
+                </div>
+                <div class="sample-card">
+                    <div class="sample-type">Mobile SDK Guide</div>
+                    <h3>Capture Engagement Data (Mobile)</h3>
+                    <p>Implementation guide for capturing engagement events via the Engagement Mobile SDK — structured/unstructured events, iOS and Android code samples.</p>
+                    <div class="sample-preview">
+                        <pre><code># Capture Engagement Data
 
-			<!-- Second Section -->
-			<section id="second" class="main special">
-				<header class="major">
-					<h2>Skills</h2>
-					<h3 align="center">Technical Writing & Development:</h3>
-					<div class='all-icons'>
-                        <ul class="features">
-                            <li>
-                                <i class="fa-solid fa-file-lines"></i>
-                                <h3>Technical Writing</h3>
-                                <p>Enterprise documentation for Salesforce Data Cloud — connectors, SDKs, APIs, and platform features. Proficient in DITA XML, structured authoring, and docs-as-code workflows with Perforce and GitHub.</p>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-python"></i>
-                                <h3>Python & Automation</h3>
-                                <p>Built automation tools for documentation workflows using Python, MCP (Model Context Protocol), Slack API integrations, and CLI tooling. Experience with Flask, SQLAlchemy, and Alembic for full-stack applications.</p>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-square-js"></i>
-                                <h3>JavaScript & React</h3>
-                                <p>Full-stack development with React, Redux, Node.js, and Express. Built real-time applications with WebSockets (Socket.IO), integrated with AWS S3, and deployed to cloud platforms (Render, Neon PostgreSQL).</p>
-                            </li>
-                        </ul>
-						    <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-								alt="aws" width="60" height="60" /> </a>
+The Data 360 Module for the Engagement Mobile SDK
+enables the collection of rich engagement data
+from customer interactions within your mobile app.
 
-                            <a href="https://www.docker.com/"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
-								alt="docker" width="60" height="60" /> </a>
+## Supported Event Types
 
-                            <a href="https://expressjs.com"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
-								alt="express" width="60" height="60" /> </a>
+### Structured Events
+Pre-configured with Mobile Connector schema:
+- Cart Event: Track shopping cart interactions
+- Catalog Event: Monitor product engagement
+- Order Event: Capture purchase data
 
-                            <a
-							href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img
-								src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask"
-								width="60" height="60" /> </a>
+### Unstructured Events
+No predefined schema. Create custom event
+definitions for Data 360 ingestion.
 
-                            <a href="https://www.w3.org/html/"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-								alt="html5" width="60" height="60" /> </a>
+```swift
+// iOS - Structured AddToCartEvent
+SFMCSdk.track(AddToCartEvent(
+    lineItem: LineItem(
+        catalogObjectType: "Product",
+        catalogObjectId: "product-1",
+        quantity: 1,
+        price: 20.0
+    )
+))
+```</code></pre>
+                    </div>
+                    <div class="sample-meta">
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">SDK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-							rel="noreferrer">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-								alt="javascript" width="60" height="60" /> </a>
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <h2 class="section-title">Side quests</h2>
+            <div class="project-grid">
+                <a href="https://github.com/henrytamm/tech-writing-tools" target="_blank" class="project-card featured">
+                    <div class="project-label">Featured</div>
+                    <h3>Tech Writing Tools</h3>
+                    <p>Automation toolkit for technical writing workflows. Slack intake processing, doc routing, release note generation, Perforce automation.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>MCP</span>
+                        <span>Slack API</span>
+                        <span>DITA XML</span>
+                    </div>
+                    <div class="project-link">View on GitHub <span>→</span></div>
+                </a>
+                <a href="https://tea-time-ll6f.onrender.com/" target="_blank" class="project-card">
+                    <h3>Tea Time</h3>
+                    <p>Discord clone with real-time messaging, servers, channels, and WebSocket chat. Dark theme, live deploy.</p>
+                    <div class="project-tech">
+                        <span>Flask</span>
+                        <span>React</span>
+                        <span>Redux</span>
+                        <span>WebSockets</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="project-link">Live Site <span>→</span></div>
+                </a>
+                <a href="https://yell-v2.onrender.com/" target="_blank" class="project-card">
+                    <h3>Yell</h3>
+                    <p>Yelp-inspired business review platform. Star ratings, category search, Google Maps integration, full CRUD.</p>
+                    <div class="project-tech">
+                        <span>Flask</span>
+                        <span>React</span>
+                        <span>Redux</span>
+                        <span>Google Maps</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="project-link">Live Site <span>→</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-                            <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-								alt="nodejs" width="60" height="60" /> </a>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">Say hi</h2>
+            <p class="contact-sub">Want to chat about docs, automation, or anything else? I don't bite.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/henry-t95/" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/henrytamm" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:henrytam95@gmail.com" class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-                            <a href="https://www.postgresql.org"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
-								alt="postgresql" width="60" height="60" /> </a>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Built with HTML, CSS, and vibes. No frameworks were harmed.</p>
+    </footer>
 
-                            <a href="https://www.python.org"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-								alt="python" width="60" height="60" /> </a>
-
-                            <a href="https://reactjs.org/"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-								alt="react" width="60" height="60" /> </a>
-
-                            <a href="https://redux.js.org"
-							target="_blank" rel="noreferrer"> <img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-								alt="redux" width="60" height="60" /> </a>
-
-                            <a href="https://git-scm.com/"
-							target="_blank" rel="noreferrer"> <img
-								src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="60"
-								height="60" /> </a>
-					</div>
-
-				</header>
-			</section>
-
-			<!-- Get Started -->
-			<section id="cta" class="main special">
-				<header class="major">
-					<h2>Get In Touch</h2>
-					<p>Have any questions or comments? Feel free to reach out!</p>
-				</header>
-				<footer class="major">
-					<form action="https://formsubmit.co/henrytam95@gmail.com" method="post" class="center-form">
-						<label class="half-input">
-							Name
-							<input type="text" class="half-input" name="name">
-							</input>
-						</label>
-						<label class="half-input">
-							Email
-							<input type="email" class="half-input" name="email">
-							</input>
-						</label>
-						<label class="full-input">
-							Message
-							<textarea name="message">
-							</textarea>
-						</label>
-						<div id="form-submit-btn">
-							<button class='full-btn button'>
-								<h6>Submit</h6>
-							</button>
-						</div>
-					</form>
-
-					<ul class="icons">
-
-						<li><a href="https://www.linkedin.com/in/henry-t95/" target="_blank"
-								class="icon brands fa-linkedin-in alt">
-								<span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/henrytamm" class="icon brands fa-github alt" target="_blank"><span
-									class="label">GitHub</span></a></li>
-
-					</ul>
-				</footer>
-			</section>
-
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<p class="copyright">&copy; Henry Tam | Design: <a href="https://html5up.net">HTML5 UP</a>.
-			</p>
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<!-- D3.js -->
-	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<script src="assets/js/d3.js"></script>
-
+    <script src="script.js"></script>
+</body>
 </html>
